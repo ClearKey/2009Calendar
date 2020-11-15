@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int month[15]={0,31,28,31,30,31,30,31,31,30,31,30,31};
+string ans[7]={"Wednesday", "Thursday", "Friday", "Saturday","Sunday","Monday","Tuesday"};
+int main()
+{
+	int n,m;
+	cin>>n>>m;//year:2009
+	int d=n;
+	for(int i=0;i<m;i++)
+	{
+		d+=month[i];
+	}
+	cout<<ans[d%7]<<'\n';
+}
